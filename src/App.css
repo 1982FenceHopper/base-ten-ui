@@ -1,26 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+@import "tailwindcss";
+
+:root {
+  --color-blue: oklch(45% 50% 264deg);
+  --color-red: oklch(50% 55% 31deg);
+
+  --color-gray-50: oklch(98.42% 0.0034 247.86deg);
+  --color-gray-100: oklch(12% 9.5% 264deg);
+  --color-gray-200: oklch(12% 9% 264deg);
+  --color-gray-300: oklch(12% 8.5% 264deg);
+  --color-gray-400: oklch(12% 8% 264deg);
+  --color-gray-500: oklch(12% 7.5% 264deg);
+  --color-gray-600: oklch(12% 7% 264deg);
+  --color-gray-700: oklch(12% 6% 264deg);
+  --color-gray-800: oklch(12% 5% 264deg);
+  --color-gray-900: oklch(12% 5% 264deg);
+  --color-gray-950: oklch(12% 5% 264deg);
+
+  --color-gray-75: color-mix(
+    in oklch,
+    var(--color-gray-100),
+    oklch(100% 0 0) 10%
+  );
+
+  @media (prefers-color-scheme: dark) {
+    --color-blue: oklch(69% 50% 264deg);
+    --color-red: oklch(80% 55% 31deg);
+
+    --color-gray-50: oklch(17% 1% 264deg);
+    --color-gray-100: oklch(28% 3% 264deg);
+    --color-gray-200: oklch(31% 3% 264deg);
+    --color-gray-300: oklch(35% 3% 264deg);
+    --color-gray-400: oklch(47% 3.5% 264deg);
+    --color-gray-500: oklch(64% 4% 264deg);
+    --color-gray-600: oklch(82% 4% 264deg);
+    --color-gray-700: oklch(92% 4.5% 264deg);
+    --color-gray-800: oklch(93% 3.5% 264deg);
+    --color-gray-900: oklch(95% 2% 264deg);
+    --color-gray-950: oklch(93.968% 0.0059 264.658);
+
+    --color-gray-75: color-mix(
+      in oklch,
+      var(--color-gray-100),
+      oklch(0% 0 0) 10%
+    );
+  }
+}
+
+@theme {
+  --color-blue: var(--color-blue);
+  --color-red: var(--color-red);
+
+  --color-gray-50: var(--color-gray-50);
+  --color-gray-75: var(--color-gray-75);
+  --color-gray-100: var(--color-gray-100);
+  --color-gray-200: var(--color-gray-200);
+  --color-gray-300: var(--color-gray-300);
+  --color-gray-400: var(--color-gray-400);
+  --color-gray-500: var(--color-gray-500);
+  --color-gray-600: var(--color-gray-600);
+  --color-gray-700: var(--color-gray-700);
+  --color-gray-800: var(--color-gray-800);
+  --color-gray-900: var(--color-gray-900);
+  --color-gray-950: var(--color-gray-950);
+
+  --font-mono: "Geist Mono", Courier, monospace;
+  --font-future: "Poiret One", Courier, monospace;
+}
+
+html,
 body {
+  height: 100%;
   margin: 0;
-  color: #fff;
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  background-image: linear-gradient(to bottom, #020917, #101725);
+  padding: 0;
 }
 
-.content {
-  display: flex;
-  min-height: 100vh;
-  line-height: 1.1;
-  text-align: center;
-  flex-direction: column;
-  justify-content: center;
+html::selection {
+  background-color: var(--color-gray-600);
+  color: var(--color-gray-100);
 }
 
-.content h1 {
-  font-size: 3.6rem;
-  font-weight: 700;
-}
-
-.content p {
-  font-size: 1.2rem;
+body {
+  font-family: "Geist Mono", Courier, monospace;
   font-weight: 400;
-  opacity: 0.5;
+  font-display: swap;
+  letter-spacing: 0.04rem;
+
+  color: var(--color-gray-950);
+  background-color: var(--color-gray-50);
 }

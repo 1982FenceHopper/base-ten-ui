@@ -1,10 +1,12 @@
 import './App.css';
+import Button from './components/button';
+import Dialog from './components/Dialog';
 
 const App = () => {
   return (
-    <div className="content">
-      <h1>Rsbuild with React</h1>
-      <p>Start building amazing things with Rsbuild.</p>
+    <div className="min-w-screen min-h-screen p-4 flex flex-col space-y-8">
+      <Button />
+      <Dialog />
     </div>
   );
 };
